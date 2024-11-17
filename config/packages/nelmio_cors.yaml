@@ -1,9 +1,10 @@
 nelmio_cors:
     defaults:
-        allow_origin: ['http://localhost:5174'] 
+        allow_origin: ['http://localhost:5173'] 
         allow_headers: ['Content-Type', 'Authorization']
         allow_methods: ['GET', 'POST', 'OPTIONS']
+        allow_credentials: true
         max_age: 3600
     paths:
         '^/api/': # Appliquez CORS uniquement aux routes qui commencent par /api/
-            allow_origin: ['http://localhost:5174']
+            allow_origin: ['http://localhost:5173']
