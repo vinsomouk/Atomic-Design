@@ -19,7 +19,7 @@ class ModuleController extends AbstractController
     ): JsonResponse {
 
         $modules = $em->getRepository(Module::class)->findAll();
-dump($modules);
+
         return $this->json($modules, context: ['groups' => ["show_modules"]]);
     }
 }
